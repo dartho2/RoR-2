@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RoR2</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>RoR2</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/navigation' %>
+  <div class="container">
+  <%= render 'layouts/messages' %>
+  <%= yield %>
+  </div>
+    <%= render 'layouts/footer' %>
+
+</body>
 </html>
