@@ -1,0 +1,7 @@
+<h1 align="center">Users</h1>
+
+
+<%= @users.each do |f| %>
+<% f.username %>
+<% end %>
+<%= link_to "new", new_user_path %>
