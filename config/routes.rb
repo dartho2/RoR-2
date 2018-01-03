@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :articles
   post 'login', to: 'sessions#create'
   get 'login', to: 'sessions#new'
-  get 'logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy'
   resources :users, except: [:new]
   root "articles#index"
 end
